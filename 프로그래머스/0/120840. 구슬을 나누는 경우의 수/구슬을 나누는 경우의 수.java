@@ -6,7 +6,6 @@ class Solution {
         
         
         while(cnt >= 0){
-            System.out.println(cnt);
             answer = answer * (balls - cnt) / (share - cnt);
             cnt--;
         }
