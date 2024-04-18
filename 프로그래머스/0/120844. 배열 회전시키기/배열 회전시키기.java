@@ -1,17 +1,19 @@
 class Solution {
     public int[] solution(int[] numbers, String direction) {
-        int[] answer = new int[numbers.length];
+        int len = numbers.length;
+        int[] answer = new int[len];
         
-        if (direction.equals("left")){
-            for (int i = 0; i < numbers.length - 1; i++){
-                answer[i] = numbers[i + 1];
-            }
-            answer[numbers.length - 1] = numbers[0];
-        } else {
-            for (int i = numbers.length - 1; i > 0; i--){
+        
+        if (direction.equals("right")){
+            for (int i = len - 1; i > 0; i--){
                 answer[i] = numbers[i - 1];
             }
-            answer[0] = numbers[numbers.length - 1];
+            answer[0] = numbers[len - 1];
+        } else {
+            for (int i = 0; i < len - 1; i++){
+                answer[i] = numbers[i + 1];
+            }
+            answer[len - 1] = numbers[0];
         }
         
         return answer;
