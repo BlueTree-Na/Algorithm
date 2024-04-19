@@ -23,10 +23,12 @@ class Solution {
                 if (n % i == 0){
                     cnt++;
                 }
+                if (cnt >= 3){
+                    answer++;
+                    break;
+                }
             }
-            if (cnt >= 3){
-                answer++;
-            }
+            
             cnt = 0;
             n--;
         }
