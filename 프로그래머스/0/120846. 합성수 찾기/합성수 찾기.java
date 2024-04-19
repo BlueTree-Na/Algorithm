@@ -3,18 +3,34 @@ class Solution {
         int answer = 0;
         int cnt = 0;
         
-        while(n != 0){
-            for(int i = 1; i <= n; i++){
-                if (n % i == 0){
+        while(n > 0){
+            for (int i = 2; i <= n; i++){
+                if(n % i == 0){
                     cnt++;
                 }
             }
-            if (cnt >= 3){
+            if (cnt >= 2){
                 answer++;
             }
+            System.out.println();
             cnt = 0;
             n--;
         }
+            
+        
+        
+        // while(n != 0){
+        //     for(int i = 1; i <= n; i++){
+        //         if (n % i == 0){
+        //             cnt++;
+        //         }
+        //     }
+        //     if (cnt >= 3){
+        //         answer++;
+        //     }
+        //     cnt = 0;
+        //     n--;
+        // }
         
         
         return answer;
