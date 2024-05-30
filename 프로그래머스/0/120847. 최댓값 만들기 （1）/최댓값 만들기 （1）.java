@@ -1,0 +1,11 @@
+import static java.util.Arrays.sort;
+class Solution {
+    public int solution(int[] numbers) {
+        int answer = 0;
+        sort(numbers);
+        
+        answer = numbers[numbers.length - 1] * numbers[numbers.length - 2];
+        
+        return answer;
+    }
+}
