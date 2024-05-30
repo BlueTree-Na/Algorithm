@@ -11,10 +11,7 @@ class Solution {
                 answer = i - 1;
                 break;
             }
-            // System.out.println(answer);
-            
         }
-        
         return answer;
     }
 }
